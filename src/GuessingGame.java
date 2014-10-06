@@ -51,13 +51,16 @@ public class GuessingGame extends javax.swing.JFrame {
         lblresult.setBackground(new java.awt.Color(102, 102, 102));
         lblresult.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         lblresult.setForeground(new java.awt.Color(240, 240, 240));
+        lblresult.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblresult.setOpaque(true);
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jLabel2.setText("Attempts So Far");
 
         lblattempts.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        lblattempts.setText("  0");
+        lblattempts.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblattempts.setText("0");
+        lblattempts.setToolTipText("");
         lblattempts.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
