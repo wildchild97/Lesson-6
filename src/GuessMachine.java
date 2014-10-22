@@ -9,27 +9,30 @@ public class GuessMachine
     {
         number=(int)(Math.random()*100)+1;
         guess=0;
-        numGuesses=0;
-        
+        numGuesses=0;   
     }
     
     public String giveHint()
     {
         if(guess==number)return "You got it!";
         else if(guess<number && guess>=0) return "You guessed to low";
-        else if(guess>number && guess<=100) return "You guessed to low";
-        
+        else if(guess>number && guess<=100) return "You guessed to high";   
     }
     
-    public int gotNumGuesses()
+    public boolean setGuess(int number)
     {
-        return
-    }
-    
-    public boolean setGuess()
+       if (guess<0 || guess>100) return false;
+       
+       else 
+       {
+           numGuesses+=1;
+           return true;
+       }
+                
+    } 
+   
+    public int getNumGuesses()
     {
-        return
+        return numGuesses;
     }
-    //to do - add methods:
-    //giveHint(), setGuess(), getNumGuessses()
 }
