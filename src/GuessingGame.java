@@ -16,6 +16,7 @@ public class GuessingGame extends javax.swing.JFrame {
      */
     public GuessingGame() {
         initComponents();
+        machine=new GuessMachine();
     }
 
     /**
@@ -110,14 +111,14 @@ public class GuessingGame extends javax.swing.JFrame {
 
     private void btnsubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnsubmitActionPerformed
          int number=Integer.parseInt(txtguess.getText());
-         if (machine.setGuess(guess==true))
+         if (machine.setGuess(number)==true)
          {
              lblresult.setText(machine.giveHint());
              lblattempts.setText("" + machine.getNumGuesses());
          }
          else
              lblresult.setText("Invalid guess");
-         if(machine.giveHint().equals("You got it!")) btnsubmit.setEnabled(false);
+         if(machine.giveHint().equals("You got it")) btnsubmit.setEnabled(false);
     }//GEN-LAST:event_btnsubmitActionPerformed
 
     /**
