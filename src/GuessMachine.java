@@ -14,18 +14,19 @@ public class GuessMachine
     
     public String giveHint()
     {
-        if(guess==number)return "You got it!";
+        if(guess==number)return "You got it";
         else if(guess<number && guess>=0) return "You guessed to low";
-        else if(guess>number && guess<=100) return "You guessed to high";   
+        else  return "You guessed to high";   
     }
     
     public boolean setGuess(int number)
     {
-       if (guess<0 || guess>100) return false;
+        if (number<0 || number>100) return false;
        
        else 
        {
-           numGuesses+=1;
+           numGuesses+=1; 
+           guess=number;
            return true;
        }
                 
